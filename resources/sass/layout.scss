@@ -1,0 +1,41 @@
+.body, html, main {
+    background-color: #F5F2ED;
+}
+
+.navbar-main {
+    padding: 20px;
+    background-color: #191919;
+
+    .nav-link {
+        font-size: 17px;
+    }
+
+    #link-carrinho {
+        margin-right: 30px;
+    }
+}
+
+#slide-section {
+    background-color: #191919;
+}
+
+#main-content {
+    padding: 40px;
+}
+
+hr {
+    color: #898989;
+}
+
+.card-news {
+    background-color: #191919;
+    color: white;
+}
+
+#produtos-container {
+    padding: 40px;
+}
+
+.notfound {
+    background-color: #fffcf7;
+}
