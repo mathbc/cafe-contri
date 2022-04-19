@@ -15,6 +15,7 @@
             </div>
             <div class="navbar-nav ms-auto">
                 @guest
+                    <span class="nav-link text-warning">Faça o login para efetuar pedidos <i class="fa fa-arrow-right"></i></span>
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @else
                     <a id="link-carrinho" class="nav-link position-relative" href="#">

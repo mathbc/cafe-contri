@@ -15,6 +15,7 @@
             </div>
             <div class="navbar-nav ms-auto">
                 <?php if(auth()->guard()->guest()): ?>
+                    <span class="nav-link text-warning">Faça o login para efetuar pedidos <i class="fa fa-arrow-right"></i></span>
                     <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                 <?php else: ?>
                     <a id="link-carrinho" class="nav-link position-relative" href="#">

@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('produto', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo');
+            $table->string('codigo')->nullable();
             $table->string('nome');
-            $table->string('marca');
-            $table->integer('quantidade');
+            $table->string('marca')->nullable();
+            $table->integer('quantidade')->nullable();
             $table->boolean('ativo')->default('1');
             $table->enum('tipo_cobranca', ['POR_UNIDADE', 'POR_QUILO']);
             $table->float('preco');
-            $table->text('descricao');
+            $table->text('descricao')->nullable();
             $table->timestamps();
         });
     }

@@ -3,7 +3,10 @@
 }
 
 .navbar-main {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: #191919;
 
     .nav-link {
@@ -15,6 +18,10 @@
     }
 }
 
+#main-footer {
+    background-color: #191919;
+}
+
 #slide-section {
     background-color: #191919;
 }
@@ -24,12 +31,16 @@
 }
 
 hr {
-    color: #898989;
+    color: #949494;
 }
 
 .card-news {
     background-color: #191919;
     color: white;
+
+    .card-body {
+        padding: 70px;
+    }
 }
 
 #produtos-container {
@@ -38,4 +49,8 @@ hr {
 
 .notfound {
     background-color: #fffcf7;
+}
+
+#login-container {
+    margin: auto;
 }

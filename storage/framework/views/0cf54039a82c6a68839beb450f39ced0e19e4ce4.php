@@ -5,16 +5,16 @@
         </strong>
         <div class="row mt-4">
             <div class="col-6">
-                <div class="shadow-sm card-news">
+                <div class="shadow card-news" style="background-image: url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500') !important;">
                     <div class="card-body">
-                        <h5><strong>Cappuccino</strong></h5>
+                        <h4><strong>Cappuccino</strong></h4>
                     </div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="shadow-sm card-news">
+                <div class="shadow card-news" style="background-image: url('https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500') !important;">
                     <div class="card-body">
-                        <h5><strong>Super expresso</strong></h5>
+                        <h4><strong>Super expresso</strong></h4>
                     </div>
                 </div>
             </div>
