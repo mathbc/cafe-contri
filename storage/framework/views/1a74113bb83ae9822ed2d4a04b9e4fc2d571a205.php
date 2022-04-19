@@ -41,9 +41,8 @@
                             </a>
 
                             <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('cadastrar', \App\Models\Produto::class)): ?>
-                                <div class="dropdown-item">
-                                    Painel de controle
-                                </div>
+                                <a href="<?php echo e(route('admin.index')); ?>" class="dropdown-item">Painel de controle</a>
+
                             <?php endif; ?>
 
                             <div class="dropdown-item">

@@ -98,7 +98,7 @@
                         <textarea name="descricao" cols="30" rows="10" class="form-control shadow-sm"></textarea>
                     </div>
                 </div>
-                <button class="btn btn-dark float-end shadow mb-4" type="submit">Salvar</button>
+                <button class="btn btn-dark float-end shadow" type="submit">Salvar</button>
             </form>
         </div>
     </div>

@@ -39,9 +39,8 @@
                             </a>
 
                             @can('cadastrar', \App\Models\Produto::class)
-                                <div class="dropdown-item">
-                                    Painel de controle
-                                </div>
+                                <a href="{{ route('admin.index') }}" class="dropdown-item">Painel de controle</a>
+
                             @endcan
 
                             <div class="dropdown-item">

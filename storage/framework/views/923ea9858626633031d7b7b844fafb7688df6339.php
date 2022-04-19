@@ -4,7 +4,7 @@
         <div class="col-md-4">
             <div class="col-12 mb-4">
                 <div class="col-md-12">
-                    <img src="<?php echo e(asset('images/logo.png')); ?>" height="90" height="90" alt="">
+                    <img src="<?php echo e(asset('images/logo.png')); ?>" class="mx-auto d-block" height="90" height="90" alt="">
                 </div>
             </div>
             <div class="card shadow-sm">

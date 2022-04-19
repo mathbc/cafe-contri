@@ -18,8 +18,20 @@
     }
 }
 
+.slide-image {
+    height: 600px !important;
+}
+
 #main-footer {
     background-color: #191919;
+}
+
+.page-item.active {
+    .page-link {
+        background-color: #191919 !important;
+        border-color: #191919 !important;
+        color: white;
+    }
 }
 
 #slide-section {

@@ -23,3 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 require __DIR__.'/produtos.php';
 require __DIR__.'/pedidos.php';
+require __DIR__.'/admin.php';
