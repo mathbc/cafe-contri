@@ -18,7 +18,7 @@
                     <span class="nav-link text-warning">Faça o login para efetuar pedidos <i class="fa fa-arrow-right"></i></span>
                     <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                 <?php else: ?>
-                    <a id="link-carrinho" class="nav-link position-relative" href="#">
+                    <a id="link-carrinho" class="nav-link position-relative" href="#" onclick="openNav()">
                         <i class="fa fa-cart-shopping">
                         </i>
                         <span id="bagde-itens-carrinho" class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

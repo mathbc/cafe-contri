@@ -3,8 +3,8 @@
 }
 
 .navbar-main {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
     background-color: #191919;
@@ -59,10 +59,64 @@ hr {
     padding: 40px;
 }
 
+#admin-container {
+    padding: 40px;
+}
+
 .notfound {
     background-color: #fffcf7;
 }
 
 #login-container {
     margin: auto;
+}
+
+.nav-item {
+    .nav-link.active {
+        border-top: 2px solid #191919;
+        background-color: #fffcf7;
+    }
+}
+
+/* The sidepanel menu */
+.sidepanel {
+    height: 100%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidepanel-content {
+        padding: 22px;
+    }
+
+    .img-carrinho {
+        max-width: 100%;
+    }
+
+    .grid-finalizar-pedido {
+        margin-top: auto;
+    }
 }
