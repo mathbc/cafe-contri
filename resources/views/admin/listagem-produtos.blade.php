@@ -42,6 +42,8 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     @if($produto->ativo)
                                         <li><a class="dropdown-item" onclick="inativarProduto({{ $produto->id }})" href="#">Inativar</a></li>
+                                    @else
+                                        <li><a class="dropdown-item" onclick="ativarProduto({{ $produto->id }})" href="#">Ativar</a></li>
                                     @endif
                                     <li><a class="dropdown-item" href="#">Editar</a></li>
                                     <li><a class="dropdown-item" href="#">Excluir</a></li>
@@ -67,7 +69,11 @@
 @section('scripts')
 <script>
     function inativarProduto(produtoId) {
-        toastr.success('Uhuuuuul', 'teste');
+        toastr.success('Este produto foi inativado com sucesso!', 'Produto Inativado');
+    }
+
+    function ativarProduto(produtoId) {
+        toastr.success('Este produto foi ativado com sucesso!', 'Produto Inativado');
     }
 </script>
 @append
