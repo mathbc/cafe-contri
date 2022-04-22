@@ -40,7 +40,9 @@
                                     <i class="fa fa-ellipsis-h"></i>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Inativar</a></li>
+                                    @if($produto->ativo)
+                                        <li><a class="dropdown-item" onclick="inativarProduto({{ $produto->id }})" href="#">Inativar</a></li>
+                                    @endif
                                     <li><a class="dropdown-item" href="#">Editar</a></li>
                                     <li><a class="dropdown-item" href="#">Excluir</a></li>
                                 </ul>
@@ -61,3 +63,11 @@
         @endif
     </div>
 @endsection
+
+@section('scripts')
+<script>
+    function inativarProduto(produtoId) {
+        toastr.success('Uhuuuuul', 'teste');
+    }
+</script>
+@append

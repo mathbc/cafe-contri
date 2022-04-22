@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/layout.css')); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body>
     <?php echo $__env->make('layouts.includes.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -32,17 +33,11 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        /* Set the width of the sidebar to 250px (show it) */
-        function openNav() {
-            document.getElementById("mySidepanel").style.width = "470px";
-        }
 
-        /* Set the width of the sidebar to 0 (hide it) */
-        function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0";
-        }
-    </script>
+    <!-- JS Carrinho -->
+    <script src="<?php echo e(asset('js/carrinho.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js')); ?>"></script>
+
     <?php echo $__env->yieldContent('scripts'); ?>
 </body>
 </html>

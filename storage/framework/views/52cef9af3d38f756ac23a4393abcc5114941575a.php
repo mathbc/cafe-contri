@@ -2,10 +2,15 @@
     <section id="slide-section">
         <?php echo $__env->make('includes-index.slides', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </section>
-    <div id="main-content" class="container">
+    <div class="container main-content">
         <section id="news-section">
             <?php echo $__env->make('includes-index.news-section', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </section>
+    </div>
+    <section>
+        <?php echo $__env->make('includes-index.qualities-section', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    </section>
+    <div class="container main-content">
         <section id="main-section">
             <?php echo $__env->make('includes-index.main-section', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </section>

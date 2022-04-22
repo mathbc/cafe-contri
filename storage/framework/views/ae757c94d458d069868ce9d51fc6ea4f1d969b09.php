@@ -1,21 +1,31 @@
 <div id="carouselExampleControls" class="carousel slide shadow" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="w-100 slide-image img-fluid" alt="...">
+            <picture>
+                <source srcset="https://images.pexels.com/photos/296285/pexels-photo-296285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" type="image/svg+xml">
+                <img src="https://images.pexels.com/photos/296285/pexels-photo-296285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block" alt="MDN">
+            </picture>
+
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="w-100 slide-image img-fluid" alt="...">
+            <picture>
+                <source srcset="https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" type="image/svg+xml">
+                <img src="https://images.pexels.com/photos/302897/pexels-photo-302897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block" alt="MDN">
+            </picture>
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.pexels.com/photos/414555/pexels-photo-414555.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" class="w-100 slide-image img-fluid" alt="...">
+            <picture>
+                <source srcset="https://images.pexels.com/photos/302898/pexels-photo-302898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" type="image/svg+xml">
+                <img src="https://images.pexels.com/photos/302898/pexels-photo-302898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block" alt="MDN">
+            </picture>
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>

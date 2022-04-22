@@ -1,4 +1,4 @@
-<div class="mt-5">
+<div class="mt-2">
     <div class="col-12">
         <h3><strong>Mais vendidos</strong></h3>
         <strong>

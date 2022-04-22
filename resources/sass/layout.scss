@@ -34,11 +34,15 @@
     }
 }
 
+.carousel-item {
+    height: 600px;
+}
+
 #slide-section {
     background-color: #191919;
 }
 
-#main-content {
+.main-content {
     padding: 40px;
 }
 
@@ -76,6 +80,17 @@ hr {
         border-top: 2px solid #191919;
         background-color: #fffcf7;
     }
+}
+
+#quality-first-div {
+    background-image: url('https://images.pexels.com/photos/374147/pexels-photo-374147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    height: 300px;
+}
+
+#quality-first-div-container {
+    padding: 2rem;
+    background-color: #191919;
 }
 
 /* The sidepanel menu */
