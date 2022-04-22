@@ -7,5 +7,6 @@ Route::prefix('produtos')->group(
         Route::get('/', [ProdutoController::class, 'index'])->name('produtos.index');
         Route::get('/cadastro/{produto?}', [ProdutoController::class, 'cadastrar'])->name('produtos.cadatro')->middleware('auth');
         Route::post('/salvar/{produto?}', [ProdutoController::class, 'salvar'])->name('produtos.salvar')->middleware('auth');
+        Route::get('/alterar-status-ativo/{produto}/{statusAtivo}', [ProdutoController::class, 'alterarStatusAtivo'])->middleware('auth');
     }
 );

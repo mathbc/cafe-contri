@@ -45,4 +45,11 @@ class ProdutoController extends Controller
 
         return Redirect::back()->with('success', 'Dados salvos com sucesso!');
     }
+
+    public function alterarStatusAtivo(Produto $produto, int $statusAtivo) {
+        $produto->ativo = $statusAtivo;
+        $produto->save();
+
+        return response()->json($produto, 200);
+    }
 }

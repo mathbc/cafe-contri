@@ -11,6 +11,7 @@
                     <th>Nome</th>
                     <th>Marca</th>
                     <th class="text-center">Qtd. Estoque</th>
+                    <th class="text-center">N. de pedidos</th>
                     <th class="text-center">Ativo</th>
                     <th class="text-center">Preço</th>
                     <th class="text-center">Ações</th>
@@ -23,7 +24,8 @@
                         <td>{{ $produto->nome }}</td>
                         <td>{{ $produto->marca ?? '-' }}</td>
                         <td class="text-center">{{ $produto->quantidade ?? '-' }}</td>
-                        <td class="text-center">
+                        <td class="text-center">{{ $produto->produto_pedido_count }}</td>
+                        <td class="text-center" id="status-ativo-{{ $produto->id }}">
                             @if ($produto->ativo)
                                 <i class="fa fa-check text-success"></i>
                             @else
@@ -41,11 +43,19 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     @if($produto->ativo)
-                                        <li><a class="dropdown-item" onclick="inativarProduto({{ $produto->id }})" href="#">Inativar</a></li>
+                                        <li>
+                                            <a class="dropdown-item" onclick="inativarProduto({{ $produto->id }})" id="alterar-status-ativo-produto-{{ $produto->id }}" href="#">
+                                                Inativar
+                                            </a>
+                                        </li>
                                     @else
-                                        <li><a class="dropdown-item" onclick="ativarProduto({{ $produto->id }})" href="#">Ativar</a></li>
+                                        <li>
+                                            <a class="dropdown-item" onclick="ativarProduto({{ $produto->id }})" id="alterar-status-ativo-produto-{{ $produto->id }}" href="#">
+                                                Ativar
+                                            </a>
+                                        </li>
                                     @endif
-                                    <li><a class="dropdown-item" href="#">Editar</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('produtos.cadatro', $produto) }}">Editar</a></li>
                                     <li><a class="dropdown-item" href="#">Excluir</a></li>
                                 </ul>
                             </div>
@@ -69,11 +79,22 @@
 @section('scripts')
 <script>
     function inativarProduto(produtoId) {
-        toastr.success('Este produto foi inativado com sucesso!', 'Produto Inativado');
+        $.get(`/produtos/alterar-status-ativo/${produtoId}/0`, function(response) {
+            $(`#alterar-status-ativo-produto-${produtoId}`).attr('onclick', `ativarProduto(${produtoId})`).html('Ativar');
+            $(`#status-ativo-${produtoId}`).html('<i class="fa fa-times text-danger"></i>')
+
+            toastr.success('Este produto foi inativado com sucesso!', 'Produto Inativado');
+        });
+
     }
 
     function ativarProduto(produtoId) {
-        toastr.success('Este produto foi ativado com sucesso!', 'Produto Inativado');
+        $.get(`/produtos/alterar-status-ativo/${produtoId}/1`, function(response) {
+            $(`#alterar-status-ativo-produto-${produtoId}`).attr('onclick', `inativarProduto(${produtoId})`).html('Inativar');
+            $(`#status-ativo-${produtoId}`).html('<i class="fa fa-check text-success"></i>')
+
+            toastr.success('Este produto foi inativado com sucesso!', 'Produto Inativado');
+        });
     }
 </script>
 @append

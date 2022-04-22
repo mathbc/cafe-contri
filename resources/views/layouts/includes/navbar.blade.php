@@ -1,7 +1,7 @@
 <nav class="navbar-main navbar navbar-expand-lg navbar-dark shadow-lg">
     <div class="container-fluid">
         <a class="navbar-brand mr-4" href="#">
-            <img src="{{ asset('images/logo.png') }}" height="70" height="70" alt="">
+            <img src="{{ asset('images/logo.png') }}" height="50" height="50" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,13 @@
                     <span class="nav-link text-warning">Faça o login para efetuar pedidos <i class="fa fa-arrow-right"></i></span>
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @else
-                    <a id="link-carrinho" class="nav-link position-relative" href="#" onclick="openNav()">
+                    {{-- <a id="link-carrinho" class="nav-link position-relative" href="#" onclick="openNav()">
                         <i class="fa fa-cart-shopping">
                         </i>
                         <span id="bagde-itens-carrinho" class="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             99
                         </span>
-                    </a>
+                    </a> --}}
 
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

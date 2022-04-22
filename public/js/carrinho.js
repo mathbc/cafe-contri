@@ -1,6 +1,6 @@
 /* Set the width of the sidebar to 250px (show it) */
 function openNav() {
-    document.getElementById("carrinhoSidepanel").style.width = "500px";
+    document.getElementById("carrinhoSidepanel").style.width = "550px";
   }
 
   /* Set the width of the sidebar to 0 (hide it) */

@@ -10,4 +10,8 @@ class Produto extends Model
     use HasFactory;
 
     protected $table = 'produto';
+
+    public function produtoPedido() {
+        return $this->hasMany(ProdutoPedido::class, 'produto_id', 'id');
+    }
 }

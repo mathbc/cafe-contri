@@ -95,7 +95,7 @@
                 <div class="col-12 mb-4">
                     <div class="form-group">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <textarea name="descricao" cols="30" rows="10" class="form-control shadow-sm"></textarea>
+                        <textarea name="descricao" cols="30" rows="10" class="form-control shadow-sm">{{ $produto ? $produto->descricao : '' }}</textarea>
                     </div>
                 </div>
                 <button class="btn btn-dark float-end shadow" type="submit">Salvar</button>

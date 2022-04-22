@@ -2,20 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedido;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
     /**
      * Show the application dashboard.
      *
@@ -23,6 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $maisPedidos = Produto::whereHas('produtoPedido')->orderBy('nome')->limit(3)->get();
+
+        return view('index', compact('maisPedidos'));
     }
 }

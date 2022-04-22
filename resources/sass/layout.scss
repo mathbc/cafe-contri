@@ -91,6 +91,12 @@ hr {
 #quality-first-div-container {
     padding: 2rem;
     background-color: #191919;
+
+    .icone-quality:hover {
+        background-color: #857a67 !important;
+        cursor: pointer;
+        color: white !important;
+    }
 }
 
 /* The sidepanel menu */
@@ -134,4 +140,8 @@ hr {
     .grid-finalizar-pedido {
         margin-top: auto;
     }
+}
+
+.card-produto-pedido {
+    max-width: 500px;
 }

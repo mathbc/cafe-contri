@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        $produtos = Produto::orderBy('nome')->paginate();
+        $this->authorize('cadastrar', Produto::class);
+
+        $produtos = Produto::orderBy('nome')->withCount('produtoPedido')->paginate();
 
         return view('admin.listagem-produtos', compact('produtos'));
     }
