@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $maisPedidos = Produto::whereHas('produtoPedido')->orderBy('nome')->limit(3)->get();
+        $maisPedidos = Produto::whereHas('produtoPedido')->withCount('produtoPedido')->orderBy('produto_pedido_count')->limit(3)->get();
 
         return view('index', compact('maisPedidos'));
     }

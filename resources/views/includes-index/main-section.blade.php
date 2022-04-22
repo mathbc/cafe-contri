@@ -1,6 +1,6 @@
 <div class="mt-2">
     <div class="col-12">
-        <h3 class="text-center"><strong>Mais vendidos</strong></h3>
+        <h3 class="text-center"><strong>Mais pedidos</strong></h3>
         <div class="row justify-content-center">
             @forelse ($maisPedidos as $pedido)
                 <div class="col-12 col-sm-4 mt-3">

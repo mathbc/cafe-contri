@@ -27,11 +27,12 @@
 
                                 </h5>
                                 <h5 class="text-center text-success mb-3">R$ <?php echo e($produto->preco); ?></h5>
-                                <div class="d-grid mx-auto">
+                                <div class="text-center">
                                     <?php
                                         $message = "Olá estou interessado em comprar o produto ".$produto->nome;
                                         $message = Str::replace(" ", "%20", $message);
                                     ?>
+                                    <a href="" class="btn btn-secondary mx-auto">Informações</a>
                                     <a href="https://wa.me/5547997900065/?text=<?php echo e($message); ?>" class="btn btn-success mx-auto">
                                         Fale conosco
                                     </a>

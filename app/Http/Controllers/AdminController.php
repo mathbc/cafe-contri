@@ -10,7 +10,10 @@ class AdminController extends Controller
     public function index() {
         $this->authorize('cadastrar', Produto::class);
 
-        $produtos = Produto::orderBy('nome')->withCount('produtoPedido')->paginate();
+        $produtos = Produto::orderBy('nome')
+            ->withCount('produtoPedido')
+            ->with(['produtoPedido'])
+            ->paginate();
 
         return view('admin.listagem-produtos', compact('produtos'));
     }

@@ -12,6 +12,7 @@
                     <th>Marca</th>
                     <th class="text-center">Qtd. Estoque</th>
                     <th class="text-center">N. de pedidos</th>
+                    <th class="text-center">N. de vendas</th>
                     <th class="text-center">Ativo</th>
                     <th class="text-center">Preço</th>
                     <th class="text-center">Ações</th>
@@ -25,6 +26,9 @@
                         <td>{{ $produto->marca ?? '-' }}</td>
                         <td class="text-center">{{ $produto->quantidade ?? '-' }}</td>
                         <td class="text-center">{{ $produto->produto_pedido_count }}</td>
+                        <td class="text-center">
+                            {{ $produto->produtoPedido->sum('quantidade') }}
+                        </td>
                         <td class="text-center" id="status-ativo-{{ $produto->id }}">
                             @if ($produto->ativo)
                                 <i class="fa fa-check text-success"></i>
@@ -33,7 +37,7 @@
                             @endif
                         </td>
                         <td class="text-center">
-                            {{ $produto->preco }}
+                            R$ {{ $produto->preco }}
                         </td>
                         <td class="text-center">
                             <div class="dropdown">
