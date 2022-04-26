@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ImagemProduto;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class ProdutoController extends Controller
 {
@@ -28,6 +30,7 @@ class ProdutoController extends Controller
             [
                 'nome' => 'required',
                 'preco' => 'required|numeric',
+                'imagem' => 'image|mimes:jpeg,png,jpg|max:2048'
             ]
         );
 
@@ -42,6 +45,19 @@ class ProdutoController extends Controller
         $produto->descricao = $request->get('descricao');
 
         $produto->save();
+
+        if (isset($request->imagem) && $request->imagem) {
+            $nomeArquivo = $request->file('imagem')->getClientOriginalName();
+            $caminhoArquivo = $request->file('imagem')->store('public/produtos');
+
+            $imagem = $produto->imagemProduto ?? new ImagemProduto();
+
+            $imagem->produto_id = $produto->id;
+            $imagem->nome = $nomeArquivo;
+            $imagem->caminho = $caminhoArquivo;
+            $imagem->save();
+        }
+
 
         return Redirect::back()->with('success', 'Dados salvos com sucesso!');
     }

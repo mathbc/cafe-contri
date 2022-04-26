@@ -26,7 +26,7 @@
         </div>
         <hr>
         <div class="col-12 mt-4">
-            <form action="{{ $produto ? route('produtos.salvar', $produto) : route('produtos.salvar') }}" method="post">
+            <form action="{{ $produto ? route('produtos.salvar', $produto) : route('produtos.salvar') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="col-12 col-sm-2 mb-4">
                     <div class="form-group">
@@ -55,6 +55,20 @@
                         @enderror
                     </div>
                 </div>
+                <div class="col-12 col-sm-4 mb-4">
+                    <div class="form-group">
+                        <label for="imagem" class="form-label">Imagem do produto</label>
+                        <input type="file" class="form-control shadow-sm @error('imagem') is-invalid @enderror" name="imagem">
+                        @error('imagem')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                @if($produto && $produto->imagemProduto)
+                    <div class="col-12 col-sm-4 mb-4">
+                        <img src="{{ asset('storage/'.str_replace('public', '', $produto->imagemProduto->caminho)) }}" class="img-thumbnail" alt="{{ $produto->imagemProduto->nome }}">
+                    </div>
+                @endif
                 <div class="col-12 mb-4">
                     <div class="row">
                         <div class="col-12 col-sm-2">
