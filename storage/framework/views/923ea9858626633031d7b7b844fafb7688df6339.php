@@ -64,7 +64,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="col-12">
                             <div class="row justify-content-between">
                                 <div class="col-6">
-                                    <a href="#">Não possuo cadastro</a>
+                                    <a href="<?php echo e(route('auth-cafe-contri.registrar-usuario')); ?>">Não possuo cadastro</a>
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" class="btn btn-dark shadow-sm float-end">

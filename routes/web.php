@@ -17,10 +17,11 @@ Route::get('/', function () {
     return redirect('home');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 require __DIR__.'/produtos.php';
 require __DIR__.'/pedidos.php';
 require __DIR__.'/admin.php';
+require __DIR__.'/auth-cafe-contri.php';
