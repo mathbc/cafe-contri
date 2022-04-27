@@ -1,0 +1,1 @@
+[27-Apr-2022 10:53:33 UTC] PHP Parse error:  syntax error, unexpected '|', expecting ';' or '{' in /home/cafecont/public_html/cafe-contri/vendor/symfony/process/PhpExecutableFinder.php on line 32
