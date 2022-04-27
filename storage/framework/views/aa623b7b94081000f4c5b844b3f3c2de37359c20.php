@@ -20,7 +20,7 @@
                     <div class="col-12 col-sm-4 mt-4">
                         <div class="card shadow-sm">
                             <?php if($produto->imagemProduto): ?>
-                                <img class="card-img-top" height="400" src="<?php echo e(asset('storage/'.str_replace('public', '', $produto->imagemProduto->caminho))); ?>" />
+                                <img class="card-img-top" height="400" src="<?php echo e(asset('storage/'.str_replace('public', '',$produto->imagemProduto->caminho))); ?>" />
                             <?php else: ?>
                                 <span class="text-center mt-3 text-danger">Nenhuma imagem cadastrada.</span>
                             <?php endif; ?>

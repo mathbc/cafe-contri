@@ -59,7 +59,7 @@ class ProdutoController extends Controller
         }
 
 
-        return Redirect::back()->with('success', 'Dados salvos com sucesso!');
+        return Redirect::route('produtos.cadatro', $produto)->with('success', 'Dados salvos com sucesso!');
     }
 
     public function alterarStatusAtivo(Produto $produto, int $statusAtivo) {
