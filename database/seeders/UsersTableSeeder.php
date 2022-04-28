@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
 
         $usuarioAdmin->name = "Admin Café Contri";
         $usuarioAdmin->email = "admin@cafecontri.com.br";
-        $usuarioAdmin->password = Hash::make('admin@cafecontri123');
+        $usuarioAdmin->password = Hash::make('Xerox@123');
         $usuarioAdmin->tipo = "PESSOA_JURIDICA";
         $usuarioAdmin->tipo_permissao = "ADMIN";
 

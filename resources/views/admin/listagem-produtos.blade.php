@@ -67,7 +67,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7" class="text-center">Nenhum produto cadastrado.</td>
+                        <td colspan="9" class="text-center">Nenhum produto cadastrado.</td>
                     </tr>
                 @endforelse
             </tbody>
